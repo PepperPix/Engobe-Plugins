@@ -1,0 +1,39 @@
+schema: spec-driven
+
+context: |
+  Language: en
+  Write all artifacts in simple, formal technical English.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  This repository contains first-party content plugins for Kiln.
+  Each plugin has its own NuGet package, version, and release configuration.
+  Plugin sources are under plugins/<plugin-name>/.
+  Work directly on main unless a change explicitly requires another branch.
+  Specs, changes, and implementation belong to this repository.
+  Do not add authorship markers, generated-content notices, or private planning references.
+  Use Conventional Commits. Use the plugin name as scope for plugin-specific changes.
+  Repository-wide documentation changes do not require a plugin scope.
+
+rules:
+  proposal:
+    - Identify the affected plugin, package, and target branch.
+    - State scope and exclusions explicitly.
+  specs:
+    - Describe observable plugin behavior and package contracts, not implementation structure.
+    - Keep technical identifiers, configuration keys, and runtime literals exact.
+  tasks:
+    - Include validation of the affected plugin and package file selection.
+    - Do not publish packages or run releases as a validation step.
+
+operations:
+  apply:
+    guidance:
+      - Implement and track tasks in this repository.
+      - Preserve independent plugin release boundaries.
+      - Stop and ask when a requirement or design decision is unclear.
+      - Record completed tasks immediately and report validation failures explicitly.
+      - Hand off for independent review; implementation is not its own review.
+  archive:
+    guidance:
+      - Archive only after implementation, validation, and independent review.
+      - Verify that the final specs match the released or accepted behavior.
