@@ -9,11 +9,11 @@ and of the other plugins in this repository.
 ## Plugins in this repository
 
 - `email-protect` — obfuscates email addresses in generated HTML to reduce scraping by spam bots.
-  (Package and content follow separately; not yet published from this repository.)
+  Distributed as `Engobe.Plugin.EmailProtect`; the first Engobe package release is `2.0.0`.
 
 ## Installation
 
-Install the email-protect plugin from NuGet with the Engobe CLI after its initial package release:
+Install the email-protect plugin from NuGet with the Engobe CLI:
 
 ```bash
 engobe plugin add Engobe.Plugin.EmailProtect
