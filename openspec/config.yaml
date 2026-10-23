@@ -5,7 +5,7 @@ context: |
   Write all artifacts in simple, formal technical English.
   Keep OpenSpec structural headings and SHALL/MUST keywords in English.
 
-  This repository contains first-party content plugins for Kiln.
+  This repository contains first-party content plugins for Engobe.
   Each plugin has its own NuGet package, version, and release configuration.
   Plugin sources are under plugins/<plugin-name>/.
   Work directly on main unless a change explicitly requires another branch.

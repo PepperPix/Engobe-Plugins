@@ -1,8 +1,8 @@
-# Kiln-Plugins
+# Engobe-Plugins
 
-First-party content plugins for [Kiln](https://github.com/PepperPix/Kiln), Kiln's static site
-generator for .NET. Each plugin is distributed as its own NuGet package, tagged `kiln-plugin` on
-nuget.org, and versioned independently of Kiln itself and of the other plugins in this repository.
+First-party content plugins for Engobe, a static site generator for .NET. Each plugin is distributed
+as its own NuGet package, tagged `engobe-plugin` on nuget.org, and versioned independently of Engobe
+and of the other plugins in this repository.
 
 **Status:** Early development — plugins are added incrementally.
 
@@ -13,20 +13,32 @@ nuget.org, and versioned independently of Kiln itself and of the other plugins i
 
 ## Installation
 
-Once the Kiln CLI supports plugin management, plugins in this repository will be installable
-directly:
+Install the email-protect plugin from NuGet with the Engobe CLI after its initial package release:
 
 ```bash
-kiln plugin add Kiln.Plugin.EmailProtect
+engobe plugin add Engobe.Plugin.EmailProtect
 ```
 
-Until then, install the plugin's NuGet package manually using the package name listed above (e.g.
-`Kiln.Plugin.EmailProtect`) once it has been published.
+### Replacing an existing installation
+
+The package ID changed from `Kiln.Plugin.EmailProtect` to `Engobe.Plugin.EmailProtect`. Back up the
+project first and inspect any local changes in the existing `email-protect` plugin directory. The
+package ID change requires replacing the installed package; updating the old lock entry will not
+migrate it:
+
+```bash
+engobe plugin remove email-protect
+engobe plugin add Engobe.Plugin.EmailProtect
+```
+
+Until nuget.org reports the `Engobe.Plugin.` prefix as reserved, Engobe classifies the package as a
+community plugin and requires the normal installation confirmation. Review the regenerated
+`.engobe/plugins.lock.json` entry and verify the rendered email link and script after installation.
 
 ## Versioning
 
 Each plugin has its own release cadence: a change to one plugin does not trigger a release for
-another, and plugin releases are independent of Kiln's own version. See
+another, and plugin releases are independent of Engobe's own version. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for the commit conventions this depends on.
 
 ## License

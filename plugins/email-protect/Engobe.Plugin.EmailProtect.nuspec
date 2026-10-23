@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Kiln.Plugin.EmailProtect</id>
-    <version>1.1.1</version>
+    <id>Engobe.Plugin.EmailProtect</id>
+    <version>2.0.0</version>
     <authors>PepperPix</authors>
     <license type="expression">Apache-2.0</license>
-    <projectUrl>https://github.com/PepperPix/Kiln-Plugins</projectUrl>
-    <description>JS-obfuscated email protection Content-Plugin for Kiln static sites.</description>
-    <tags>kiln-plugin</tags>
+    <projectUrl>https://github.com/PepperPix/Engobe-Plugins</projectUrl>
+    <repository type="git" url="https://github.com/PepperPix/Engobe-Plugins.git" />
+    <description>JS-obfuscated email protection Content-Plugin for Engobe static sites.</description>
+    <tags>engobe-plugin</tags>
   </metadata>
   <files>
     <file src="plugin.yaml" target="content/plugin.yaml" />

@@ -1,4 +1,4 @@
-# Contributing to Kiln-Plugins
+# Contributing to Engobe-Plugins
 
 Thanks for your interest in contributing. This document covers the commit conventions a change is
 expected to follow before it can be merged.

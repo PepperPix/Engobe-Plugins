@@ -1,8 +1,8 @@
 {
-    "name": "kiln-plugins-email-protect-release",
+    "name": "engobe-plugins-email-protect-release",
     "version": "0.0.0-development",
     "private": true,
-    "description": "Release tooling for the Kiln.Plugin.EmailProtect content-plugin.",
+    "description": "Release tooling for the Engobe.Plugin.EmailProtect content-plugin.",
     "devDependencies": {
         "@droidsolutions-oss/semantic-release-nuget": "^2.0.1",
         "@droidsolutions-oss/semantic-release-update-file": "^1.4.0",
@@ -31,7 +31,7 @@
                     "files": [
                         {
                             "path": [
-                                "Kiln.Plugin.EmailProtect.nuspec"
+                                "Engobe.Plugin.EmailProtect.nuspec"
                             ],
                             "type": "xml",
                             "replacements": [
@@ -44,20 +44,22 @@
                     ]
                 }
             ],
+            "./update-manifest-version.cjs",
             "@droidsolutions-oss/semantic-release-nuget",
             [
                 "@semantic-release/git",
                 {
                     "assets": [
                         "CHANGELOG.md",
-                        "Kiln.Plugin.EmailProtect.nuspec"
+                        "Engobe.Plugin.EmailProtect.nuspec",
+                        "plugin.yaml"
                     ],
                     "message": "chore(release): email-protect ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
                 }
             ],
             "@semantic-release/github"
         ],
-        "projectPath": "Kiln.Plugin.EmailProtect.nuspec",
+        "projectPath": "Engobe.Plugin.EmailProtect.nuspec",
         "npmPublish": false
     }
 }
