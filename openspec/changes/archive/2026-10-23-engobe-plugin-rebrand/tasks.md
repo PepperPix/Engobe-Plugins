@@ -15,4 +15,4 @@
 
 - [x] 3.1 Install the local package using the renamed Engobe engine and a temporary feed; verify actual trust classification, lock content, script asset resolution, encoded HTML and browser decoding, including invalid input behavior.
 - [x] 3.2 Verify release workflow gates/path filters and new trusted publishing configuration without publishing as a validation step; run strict OpenSpec validation.
-- [ ] 3.3 Inspect remaining legacy references, staged diff and post-commit stat for unexpected files, secrets or unrelated changes; hand off for independent review and clean only named temporary outputs.
+- [x] 3.3 Inspect remaining legacy references, staged diff and post-commit stat for unexpected files, secrets or unrelated changes; hand off for independent review and clean only named temporary outputs.
