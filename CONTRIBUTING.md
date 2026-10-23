@@ -15,7 +15,7 @@ type(scope): short, imperative description
 
 - `fix: ...` — patch release (`0.1.0` → `0.1.1`)
 - `feat: ...` — minor release (`0.1.0` → `0.2.0`)
-- `feat!: ...` or a `BREAKING CHANGE:` footer — major release
+- `feat: ...` or `fix: ...` with a `BREAKING CHANGE:` footer — major release
 - `chore:`, `docs:`, `refactor:`, `test:`, `build:`, `ci:` — no release bump
 
 ### Scope convention: scope = plugin name
@@ -37,6 +37,13 @@ you actually changed before committing.
 
 Commits that do not touch a specific plugin (e.g. repository-wide `docs:` or `chore:` changes) do
 not need a plugin scope.
+
+## Release Configuration
+
+The email-protect release configuration is in `plugins/email-protect/release.config.cjs`.
+Local release hooks must use `require.resolve` so the monorepo wrapper can import them from
+its own directory. The manifest prepare hook keeps `plugin.yaml` synchronized with the
+NuGet package version.
 
 ## Pull Requests
 
